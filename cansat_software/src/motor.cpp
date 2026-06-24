@@ -38,6 +38,7 @@ void MotorSetUp(int pin1,int pin2,int Motor){
 	++MOTOR_CH;
 }
 void Move(int Motor,int Speed){
+	//スピードは-255から255まで
 	if(Speed > 0){
 		ledcWrite(motor[Motor].ch1, Speed);
 		ledcWrite(motor[Motor].ch2, 0);

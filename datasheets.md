@@ -2,3 +2,4 @@
 | 部品名 | 用途 | データシート |
 |--------|--------|-----|
 |MG12E | 移動用モータ | [MG12E](https://akizukidenshi.com/goodsaffix/MG12E.pdf) |
+| ESP32 | 制御用マイコン |　[ESP32](https://akizukidenshi.com/goodsaffix/esp32-wroom-32e_esp32-wroom-32ue_datasheet_en.pdf) |

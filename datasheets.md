@@ -3,3 +3,4 @@
 |--------|--------|-----|
 |MG12E | 移動用モータ | [MG12E](https://akizukidenshi.com/goodsaffix/MG12E.pdf) |
 | ESP32 | 制御用マイコン |　[ESP32](https://akizukidenshi.com/goodsaffix/esp32-wroom-32e_esp32-wroom-32ue_datasheet_en.pdf) |
+|TB67H450|モータドライバ|[TB67H450](https://akizukidenshi.com/goodsaffix/TB67H450FNG_datasheet_ja_20190401.pdf)|

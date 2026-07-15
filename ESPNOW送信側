@@ -1,0 +1,90 @@
+#include <Bluepad32.h>
+#include <WiFi.h>
+#include <esp_now.h>
+
+ControllerPtr myController = nullptr;
+
+// 受信側のMACアドレス (例)
+uint8_t receiverMac[] = {0x94, 0xE6, 0x86, 0x92, 0x10, 0x04};
+
+// 送信データ構造体
+typedef struct struct_message {
+  int ry;
+  int ly;
+} struct_message;
+
+struct_message myData;
+
+// 送信完了時のコールバック関数
+void OnDataSent(const uint8_t *mac_addr, esp_now_send_status_t status) {
+  Serial.print("\r\nLast Packet Send Status:\t");
+  Serial.println(status == ESP_NOW_SEND_SUCCESS ? "Delivery Success" : "Delivery Fail");
+}
+
+void onConnectedController(ControllerPtr ctl) {
+  Serial.println("Controller connected!");
+  myController = ctl;
+}
+
+void onDisconnectedController(ControllerPtr ctl) {
+  if (myController == ctl) {
+    myController = nullptr;
+  }
+  Serial.println("Controller disconnected!");
+}
+
+void setup() {
+  Serial.begin(115200);
+
+  BP32.setup(&onConnectedController, &onDisconnectedController);
+  Serial.println("Ready");
+
+  delay(2000);
+
+  WiFi.mode(WIFI_MODE_STA);
+  WiFi.setSleep(true);
+
+  delay(2000);
+
+  if (esp_now_init() != ESP_OK) {
+    Serial.println("Error initializing ESP-NOW");
+    return;
+  }
+
+  esp_now_register_send_cb(OnDataSent);
+
+  // ピア情報の登録
+  esp_now_peer_info_t peerInfo = {};
+  memcpy(peerInfo.peer_addr, receiverMac, 6);
+  peerInfo.encrypt = false;
+
+  if (esp_now_add_peer(&peerInfo) != ESP_OK) {
+    Serial.println("Failed to add peer");
+    return;
+  }
+}
+
+void loop() {
+  BP32.update();
+
+  if (myController && myController->isConnected()) {
+    Serial.print("ry:");
+    Serial.print(myController->axisRY());
+    Serial.print("ly:");
+    Serial.println(myController->axisY());
+  }
+
+  myData.ry = myController->axisRY();
+  myData.ly = myController->axisY();
+
+  // データの送信
+  esp_err_t result = esp_now_send(receiverMac, (uint8_t *)&myData, sizeof(myData));
+
+  if (result == ESP_OK) {
+    Serial.println("Sent with success");
+  } else {
+    Serial.println("Error sending the data");
+  }
+
+  delay(50); // 送信速度50がかなりリアルタイムだが負荷大
+}

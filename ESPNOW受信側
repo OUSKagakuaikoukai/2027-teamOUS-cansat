@@ -1,0 +1,74 @@
+#include <WiFi.h>
+#include <esp_now.h>
+#include "motor.h"
+// 受信データ構造体
+typedef struct struct_message {
+  int ry;
+  int ly;
+} struct_message;
+
+struct_message myData;
+bool newData = false;
+
+// データ受信時のコールバック関数
+void OnDataRecv(const uint8_t * mac, const uint8_t *incomingData, int len) {
+  memcpy(&myData, incomingData, sizeof(myData));
+  Serial.print("Bytes received: ");
+  Serial.println(len);
+  myData.ry = myData.ry-4;
+  myData.ly = myData.ly-4;
+  Serial.print("ry: "); Serial.println(myData.ry);
+  Serial.print("ly: "); Serial.println(myData.ly);
+  newData = true;
+}
+
+void setup() {
+  Serial.begin(115200);
+  WiFi.mode(WIFI_MODE_STA);
+  
+  if (esp_now_init() != ESP_OK) {
+    Serial.println("Error initializing ESP-NOW");
+    return;
+  }
+  
+  esp_now_register_recv_cb(OnDataRecv);
+  MotorSetUp(5,18,0);
+  MotorSetUp(25,26,1);
+}
+
+void loop() {
+  if(newData==true){
+  newData=false;
+  Serial.print("ry: "); Serial.println(myData.ry);
+  Serial.print("ly: "); Serial.println(myData.ly);
+  //moveの値は-255から255まで//
+  if((-100<=myData.ry and myData.ry<=100) and (-100<=myData.ly and myData.ly<=100)){
+    Serial.print("C");
+    Move(0,0);
+    Move(1,0);  
+  }
+  //ここから下は全変更、両方のスティックのY座標にしたから//
+  
+  if(myData.ly<=-230 and myData.ry<=-230){
+    Serial.print("F");
+    Move(0,0);
+    Move(1,0);
+  }
+    if(myData.ly>=230 and myData.ry>=230){
+    Serial.print("B");
+    Move(0,0);
+    Move(1,0);
+  }
+  if(myData.ly<=-230 and myData.ry>=230){
+    Serial.print("R");
+    Move(0,0);
+    Move(1,0);
+  }
+  if(myData.ly>=230 and myData.ry<=-230){
+    Serial.print("L");
+    Move(0,0);
+    Move(1,0);
+  }
+  delay(50);
+  }
+}

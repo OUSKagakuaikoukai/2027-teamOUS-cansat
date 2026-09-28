@@ -1,6 +1,11 @@
 #include <Arduino.h>
 #include<motor.h>
 #include <ESP32Servo.h>
+#include <Wire.h>
+#include <Adafruit_Sensor.h>
+#include <Adafruit_BNO055.h>
+
+Adafruit_BNO055 bno = Adafruit_BNO055(55, 0x28, &Wire);
 
 Servo servo0,servo1;
 
@@ -12,38 +17,46 @@ Servo servo0,servo1;
 #define MOTOR1_PIN1 25
 #define MOTOR1_PIN2 26
 
+#define SDA_PIN 21
+#define SCL_PIN 22
 
 
 void setup() {
-  
-  MotorSetUp(MOTOR0_PIN1,MOTOR0_PIN2,0);
-  MotorSetUp(MOTOR1_PIN1,MOTOR1_PIN2,1);
-  
 
-  servo0.setPeriodHertz(50);
-  servo1.setPeriodHertz(50);
+   Serial.begin(115200);
+   Wire.begin(SDA_PIN, SCL_PIN);
+  
+  
+	if (!bno.begin())
+    {
+        Serial.println("BNO055が見つかりません");
+        while (1)
+        {
+            delay(10);
+        }
+    }
 
-// サーボを接続
-// 最小パルス幅500us、最大2500us（一般的な値）
-  servo0.attach(SERVO_PIN0, 500, 2500);
-  servo1.attach(SERVO_PIN1, 500, 2500);
+    Serial.println("BNO055 OK");
+
+    delay(1000);
 
 }
 
 void loop() {
   
-  Move(0,200);
-  Move(1,200);
-  
+   sensors_event_t event;
 
-  // 0°
-    servo0.write(0);
-	servo1.write(0);
-    delay(1000);
+    bno.getEvent(&event);
 
-    // 45°
-    servo0.write(45);
-	servo1.write(45);
-    delay(1000);
+    Serial.print("X: ");
+    Serial.print(event.orientation.x);
 
+    Serial.print("  Y: ");
+    Serial.print(event.orientation.y);
+
+    Serial.print("  Z: ");
+    Serial.println(event.orientation.z);
+
+    delay(100);
+	
 }

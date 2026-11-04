@@ -1,26 +1,19 @@
 #include <Arduino.h>
-#include <Wire.h>
-
+//#include <Wire.h>
+#include<motor.h>
 #define SDA_PIN 21
 #define SCL_PIN 22
 
+#define MOTOR_PIN1 25
+#define MOTOR_PIN2 26
+
 void setup() {
     Serial.begin(115200);
-
-    Wire.begin(SDA_PIN, SCL_PIN);
-
-    Serial.println("I2C Scanner");
-
-    for (uint8_t address = 1; address < 127; address++) {
-        Wire.beginTransmission(address);
-
-        if (Wire.endTransmission() == 0) {
-            Serial.print("Found: 0x");
-            if (address < 16) Serial.print("0");
-            Serial.println(address, HEX);
-        }
-    }
+	MotorSetUp(MOTOR_PIN1,MOTOR_PIN2,0);
 }
-
 void loop() {
+	Move(0,100);
+	delay(1000);
+	Move(0,0);
+	delay(100);
 }

@@ -1180,6 +1180,144 @@
 			)
 			(embedded_fonts no)
 		)
+		(symbol "MyNew_Library:AE-LXDC55-5V"
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(in_pos_files yes)
+			(duplicate_pin_numbers_are_jumpers no)
+			(property "Reference" "U"
+				(at 0 2.54 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Description" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "AE-LXDC55-5V_0_1"
+				(rectangle
+					(start -3.81 -1.27)
+					(end 3.81 -6.35)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "AE-LXDC55-5V_1_1"
+				(text "AE-LXDC55-5V"
+					(at 0 0 0)
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(pin power_in line
+					(at -2.54 -8.89 90)
+					(length 2.54)
+					(name "I"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin power_in line
+					(at 0 -8.89 90)
+					(length 2.54)
+					(name "G"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin power_out line
+					(at 2.54 -8.89 90)
+					(length 2.54)
+					(name "O"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "3"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
 		(symbol "MyNew_Library:JGA25-371"
 			(exclude_from_sim no)
 			(in_bom yes)
@@ -2689,10 +2827,16 @@
 		)
 	)
 	(junction
-		(at 232.41 38.1)
+		(at 191.77 46.99)
 		(diameter 0)
 		(color 0 0 0 0)
-		(uuid "10eda11c-dae1-43e3-b877-4855f1b5473c")
+		(uuid "1792e103-ef75-44aa-89e2-9c2e79a39376")
+	)
+	(junction
+		(at 205.74 44.45)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "3ae624dc-6acf-46e3-86ef-8349546ad01f")
 	)
 	(junction
 		(at 156.21 64.77)
@@ -2707,10 +2851,10 @@
 		(uuid "55847a2b-6532-4204-92b2-962ef80a738e")
 	)
 	(junction
-		(at 232.41 35.56)
+		(at 196.85 44.45)
 		(diameter 0)
 		(color 0 0 0 0)
-		(uuid "65312e65-9fff-4df3-93d4-2917290c8400")
+		(uuid "68fba5fe-c6de-45c6-9154-1b4c0c46be1a")
 	)
 	(junction
 		(at 173.99 64.77)
@@ -2729,12 +2873,6 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "e416ac72-0908-41c7-8e7f-155b6d7d4ff9")
-	)
-	(junction
-		(at 231.14 54.61)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "fcf12294-a962-4273-a552-c03a60f71443")
 	)
 	(junction
 		(at 142.24 106.68)
@@ -2874,16 +3012,6 @@
 	)
 	(wire
 		(pts
-			(xy 231.14 54.61) (xy 237.49 54.61)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "383e83e5-10ac-437e-a5fa-657f26108146")
-	)
-	(wire
-		(pts
 			(xy 69.85 63.5) (xy 74.93 63.5)
 		)
 		(stroke
@@ -2931,6 +3059,16 @@
 			(type default)
 		)
 		(uuid "455107b1-1a0b-431e-a461-155324804114")
+	)
+	(wire
+		(pts
+			(xy 205.74 44.45) (xy 196.85 44.45)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "46900476-1dbe-4122-a22a-c21355f36b17")
 	)
 	(wire
 		(pts
@@ -2994,7 +3132,7 @@
 	)
 	(wire
 		(pts
-			(xy 238.76 38.1) (xy 232.41 38.1)
+			(xy 214.63 46.99) (xy 191.77 46.99)
 		)
 		(stroke
 			(width 0)
@@ -3064,7 +3202,7 @@
 	)
 	(wire
 		(pts
-			(xy 232.41 38.1) (xy 223.52 38.1)
+			(xy 191.77 46.99) (xy 182.88 46.99)
 		)
 		(stroke
 			(width 0)
@@ -3101,6 +3239,16 @@
 			(type default)
 		)
 		(uuid "afa76066-b50b-4d67-ad7f-d616052740a8")
+	)
+	(wire
+		(pts
+			(xy 205.74 36.83) (xy 205.74 44.45)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "b35ae856-592b-454c-b362-3c67774d87c5")
 	)
 	(wire
 		(pts
@@ -3174,16 +3322,6 @@
 	)
 	(wire
 		(pts
-			(xy 223.52 54.61) (xy 231.14 54.61)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "d6c2353e-9009-43b2-8964-416c31e82eef")
-	)
-	(wire
-		(pts
 			(xy 181.61 64.77) (xy 173.99 64.77)
 		)
 		(stroke
@@ -3214,7 +3352,7 @@
 	)
 	(wire
 		(pts
-			(xy 238.76 35.56) (xy 232.41 35.56)
+			(xy 214.63 44.45) (xy 205.74 44.45)
 		)
 		(stroke
 			(width 0)
@@ -3274,7 +3412,7 @@
 	)
 	(wire
 		(pts
-			(xy 223.52 35.56) (xy 232.41 35.56)
+			(xy 182.88 44.45) (xy 196.85 44.45)
 		)
 		(stroke
 			(width 0)
@@ -3482,7 +3620,7 @@
 	)
 	(symbol
 		(lib_id "power:PWR_FLAG")
-		(at 232.41 38.1 180)
+		(at 191.77 46.99 180)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -3493,7 +3631,7 @@
 		(fields_autoplaced yes)
 		(uuid "02a59d48-66c0-4cce-8ae7-f29b346aa7ac")
 		(property "Reference" "#FLG05"
-			(at 232.41 40.005 0)
+			(at 191.77 48.895 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3504,7 +3642,7 @@
 			)
 		)
 		(property "Value" "PWR_FLAG"
-			(at 232.41 43.18 0)
+			(at 191.77 52.07 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -3514,7 +3652,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 232.41 38.1 0)
+			(at 191.77 46.99 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3525,7 +3663,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 232.41 38.1 0)
+			(at 191.77 46.99 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3536,7 +3674,7 @@
 			)
 		)
 		(property "Description" "Special symbol for telling ERC where power comes from"
-			(at 232.41 38.1 0)
+			(at 191.77 46.99 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3807,8 +3945,8 @@
 		)
 	)
 	(symbol
-		(lib_id "power:VCC")
-		(at 238.76 35.56 270)
+		(lib_id "power:+5V")
+		(at 210.82 36.83 180)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -3816,10 +3954,9 @@
 		(on_board yes)
 		(in_pos_files yes)
 		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "25f58e77-2c3a-4a1a-80b1-fd09202bb9a9")
-		(property "Reference" "#PWR016"
-			(at 234.95 35.56 0)
+		(uuid "1b0b62a5-1c3a-4821-91d9-32e2cd653524")
+		(property "Reference" "#PWR019"
+			(at 210.82 33.02 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3829,19 +3966,18 @@
 				)
 			)
 		)
-		(property "Value" "VCC"
-			(at 242.57 35.5599 90)
+		(property "Value" "+5V"
+			(at 212.344 40.132 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(justify left)
 			)
 		)
 		(property "Footprint" ""
-			(at 238.76 35.56 0)
+			(at 210.82 36.83 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3852,7 +3988,86 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 238.76 35.56 0)
+			(at 210.82 36.83 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"+5V\""
+			(at 210.82 36.83 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "072342ae-1112-4b75-b533-efb46aecc6a3")
+		)
+		(instances
+			(project "cansat_mainboard"
+				(path "/e20ed2d3-a570-4e4d-b0f6-10554ad20680"
+					(reference "#PWR019")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:VCC")
+		(at 214.63 44.45 270)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "25f58e77-2c3a-4a1a-80b1-fd09202bb9a9")
+		(property "Reference" "#PWR016"
+			(at 210.82 44.45 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "VCC"
+			(at 218.44 44.4499 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" ""
+			(at 214.63 44.45 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 214.63 44.45 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3863,7 +4078,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"VCC\""
-			(at 238.76 35.56 0)
+			(at 214.63 44.45 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3966,7 +4181,7 @@
 	)
 	(symbol
 		(lib_id "power:PWR_FLAG")
-		(at 232.41 35.56 0)
+		(at 196.85 44.45 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -3977,7 +4192,7 @@
 		(fields_autoplaced yes)
 		(uuid "2c4d09aa-c5c2-4093-9486-78dcbb50dff3")
 		(property "Reference" "#FLG03"
-			(at 232.41 33.655 0)
+			(at 196.85 42.545 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3988,7 +4203,7 @@
 			)
 		)
 		(property "Value" "PWR_FLAG"
-			(at 232.41 30.48 0)
+			(at 196.85 39.37 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -3998,7 +4213,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 232.41 35.56 0)
+			(at 196.85 44.45 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4009,7 +4224,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 232.41 35.56 0)
+			(at 196.85 44.45 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4020,7 +4235,7 @@
 			)
 		)
 		(property "Description" "Special symbol for telling ERC where power comes from"
-			(at 232.41 35.56 0)
+			(at 196.85 44.45 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4044,7 +4259,7 @@
 	)
 	(symbol
 		(lib_id "power:GND")
-		(at 238.76 38.1 90)
+		(at 214.63 46.99 90)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -4055,7 +4270,7 @@
 		(fields_autoplaced yes)
 		(uuid "2da4b16e-50e3-4337-8f4c-a0b5fdb73028")
 		(property "Reference" "#PWR017"
-			(at 245.11 38.1 0)
+			(at 220.98 46.99 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4066,7 +4281,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 242.57 38.0999 90)
+			(at 218.44 46.9899 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -4077,7 +4292,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 238.76 38.1 0)
+			(at 214.63 46.99 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4088,7 +4303,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 238.76 38.1 0)
+			(at 214.63 46.99 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4099,7 +4314,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 238.76 38.1 0)
+			(at 214.63 46.99 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4853,8 +5068,8 @@
 		)
 	)
 	(symbol
-		(lib_id "Connector:Conn_01x02_Pin")
-		(at 218.44 54.61 0)
+		(lib_id "MyNew_Library:AE-LXDC55-5V")
+		(at 208.28 27.94 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -4863,9 +5078,20 @@
 		(in_pos_files yes)
 		(dnp no)
 		(fields_autoplaced yes)
-		(uuid "6b412b40-42b4-4f49-88aa-b200c6836e63")
-		(property "Reference" "J4"
-			(at 219.075 49.53 0)
+		(uuid "6dbab68e-7365-47c1-b389-8ef719fd3c66")
+		(property "Reference" "U5"
+			(at 217.17 30.6041 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" ""
+			(at 208.28 27.94 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -4874,18 +5100,8 @@
 				)
 			)
 		)
-		(property "Value" "Conn_01x02_Pin"
-			(at 219.075 52.07 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "Connector_JST:JST_XH_B2B-XH-A_1x02_P2.50mm_Vertical"
-			(at 218.44 54.61 0)
+		(property "Footprint" "Connector_PinSocket_2.54mm:PinSocket_1x03_P2.54mm_Vertical"
+			(at 208.28 27.94 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4896,7 +5112,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 218.44 54.61 0)
+			(at 208.28 27.94 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4906,8 +5122,8 @@
 				)
 			)
 		)
-		(property "Description" "Generic connector, single row, 01x02, script generated"
-			(at 218.44 54.61 0)
+		(property "Description" ""
+			(at 208.28 27.94 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4916,17 +5132,20 @@
 					(size 1.27 1.27)
 				)
 			)
-		)
-		(pin "2"
-			(uuid "b10dc7b5-e321-4e9b-842c-436ccd7233d7")
 		)
 		(pin "1"
-			(uuid "d1a64867-1907-4cd0-b9bd-660d9ebb63b7")
+			(uuid "1ba04fec-ae29-4222-a3f2-bb59d058803e")
+		)
+		(pin "2"
+			(uuid "6fc37d3b-1ae0-40a6-96b5-075a82e0db1b")
+		)
+		(pin "3"
+			(uuid "fa1a6c92-7969-4bed-aee9-e2a4228237ac")
 		)
 		(instances
 			(project "cansat_mainboard"
 				(path "/e20ed2d3-a570-4e4d-b0f6-10554ad20680"
-					(reference "J4")
+					(reference "U5")
 					(unit 1)
 				)
 			)
@@ -5170,8 +5389,8 @@
 		)
 	)
 	(symbol
-		(lib_id "power:+5V")
-		(at 237.49 54.61 270)
+		(lib_id "power:GND")
+		(at 208.28 36.83 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -5179,10 +5398,9 @@
 		(on_board yes)
 		(in_pos_files yes)
 		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "a287cdb8-62b9-45df-b71e-5fe6614b89ee")
-		(property "Reference" "#PWR026"
-			(at 233.68 54.61 0)
+		(uuid "9860fd80-a843-4fec-9e0b-bd5ddda48c08")
+		(property "Reference" "#PWR018"
+			(at 208.28 43.18 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5192,19 +5410,18 @@
 				)
 			)
 		)
-		(property "Value" "+5V"
-			(at 241.3 54.6099 90)
+		(property "Value" "GND"
+			(at 208.026 40.386 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(justify left)
 			)
 		)
 		(property "Footprint" ""
-			(at 237.49 54.61 0)
+			(at 208.28 36.83 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5215,7 +5432,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 237.49 54.61 0)
+			(at 208.28 36.83 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5225,8 +5442,8 @@
 				)
 			)
 		)
-		(property "Description" "Power symbol creates a global label with name \"+5V\""
-			(at 237.49 54.61 0)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 208.28 36.83 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5237,12 +5454,12 @@
 			)
 		)
 		(pin "1"
-			(uuid "048fd994-29a4-4c03-ad20-d10144943edb")
+			(uuid "f166feeb-efe0-48f4-a4b9-427e2eed3603")
 		)
 		(instances
 			(project "cansat_mainboard"
 				(path "/e20ed2d3-a570-4e4d-b0f6-10554ad20680"
-					(reference "#PWR026")
+					(reference "#PWR018")
 					(unit 1)
 				)
 			)
@@ -5659,7 +5876,7 @@
 	)
 	(symbol
 		(lib_id "Connector:Conn_01x02_Pin")
-		(at 218.44 35.56 0)
+		(at 177.8 44.45 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -5670,7 +5887,7 @@
 		(fields_autoplaced yes)
 		(uuid "bec27fe2-ae71-4fcf-89e1-77ab85bcf28f")
 		(property "Reference" "J3"
-			(at 219.075 30.48 0)
+			(at 178.435 39.37 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -5680,7 +5897,7 @@
 			)
 		)
 		(property "Value" "Conn_01x02_Pin"
-			(at 219.075 33.02 0)
+			(at 178.435 41.91 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -5690,7 +5907,7 @@
 			)
 		)
 		(property "Footprint" "Connector_JST:JST_VH_B2P-VH-B_1x02_P3.96mm_Vertical"
-			(at 218.44 35.56 0)
+			(at 177.8 44.45 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5701,7 +5918,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 218.44 35.56 0)
+			(at 177.8 44.45 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5712,7 +5929,7 @@
 			)
 		)
 		(property "Description" "Generic connector, single row, 01x02, script generated"
-			(at 218.44 35.56 0)
+			(at 177.8 44.45 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5973,85 +6190,6 @@
 		)
 	)
 	(symbol
-		(lib_id "power:GND")
-		(at 223.52 57.15 90)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "db31c9ff-ef52-46c4-a7b5-5642836f50e6")
-		(property "Reference" "#PWR025"
-			(at 229.87 57.15 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "GND"
-			(at 227.33 57.1499 90)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-		(property "Footprint" ""
-			(at 223.52 57.15 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 223.52 57.15 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 223.52 57.15 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "f7d5145e-3476-43a4-8aad-ea57ce414d8c")
-		)
-		(instances
-			(project "cansat_mainboard"
-				(path "/e20ed2d3-a570-4e4d-b0f6-10554ad20680"
-					(reference "#PWR025")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_name "TB67H450module_1")
 		(lib_id "MyNew_Library:TB67H450module")
 		(at 194.31 83.82 0)
@@ -6145,84 +6283,6 @@
 			(project "cansat_mainboard"
 				(path "/e20ed2d3-a570-4e4d-b0f6-10554ad20680"
 					(reference "U2")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "power:PWR_FLAG")
-		(at 231.14 54.61 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "e99d4b6b-4a78-4d47-a4a6-0fdae27daf20")
-		(property "Reference" "#FLG04"
-			(at 231.14 52.705 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "PWR_FLAG"
-			(at 231.14 49.53 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 231.14 54.61 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 231.14 54.61 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Special symbol for telling ERC where power comes from"
-			(at 231.14 54.61 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "0912d3d8-7920-4ca7-87fe-45b831141128")
-		)
-		(instances
-			(project "cansat_mainboard"
-				(path "/e20ed2d3-a570-4e4d-b0f6-10554ad20680"
-					(reference "#FLG04")
 					(unit 1)
 				)
 			)

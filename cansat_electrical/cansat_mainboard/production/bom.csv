@@ -1,0 +1,10 @@
+﻿Designator,Footprint,Quantity,Value,LCSC Part #
+"_32, _31, _30, _29, _28, _27, _26, _25, _24, _23, _22, _21, _20, _19, _18, _17, _16, _15, _14, _13, _12, _11, _10, _9, _8, _7, _6, _5, _4, _3, _2, ",,32,,
+"C1, C3",C_Disc_D3.0mm_W1.6mm_P2.50mm,2,C,
+"C2, C4",CP_Radial_D5.0mm_P2.00mm,2,C_Polarized,
+J3,JST_VH_B2P-VH-B_1x02_P3.96mm_Vertical,1,Conn_01x02_Pin,
+J4,JST_XH_B2B-XH-A_1x02_P2.50mm_Vertical,1,Conn_01x02_Pin,
+"M1, M2",JST_XH_B6B-XH-A_1x06_P2.50mm_Vertical,2,JGA25-371 with encoder,
+"U1, U2",TB67H450module,2,~,
+U3,AE-ESP32-WROOM-32E-MINI,1,~,
+U4,JST_XH_B8B-XH-A_1x08_P2.50mm_Vertical,1,~,

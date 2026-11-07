@@ -1,0 +1,5 @@
+(sym_lib_table
+  (version 7)
+  (lib (name "MyNew_Library")(type "KiCad")(uri "${KIPRJMOD}/MyNew_Library.kicad_sym")(options "")(descr ""))
+  (lib (name "MyAkizuki_ESP32Devbord")(type "KiCad")(uri "${KIPRJMOD}/MyAkizuki_ESP32Devbord.kicad_sym")(options "")(descr ""))
+)

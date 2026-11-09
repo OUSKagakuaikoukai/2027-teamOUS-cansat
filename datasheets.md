@@ -1,9 +1,10 @@
 # Cansatの製作に使った部品です(または使う予定)
 | 部品名 | 用途 | データシート |
 |--------|--------|-----|
-|MG12E | 移動用モータ | [MG12E](https://akizukidenshi.com/goodsaffix/MG12E.pdf) |
-| ESP32 | 制御用マイコン |　[ESP32](https://akizukidenshi.com/goodsaffix/esp32-wroom-32e_esp32-wroom-32ue_datasheet_en.pdf) |
+|MG12E | 移動用モータ |[MG12E](https://akizukidenshi.com/goodsaffix/MG12E.pdf) |
+| ESP32 | 制御用マイコン |[ESP32](https://akizukidenshi.com/goodsaffix/esp32-wroom-32e_esp32-wroom-32ue_datasheet_en.pdf) |
 |TB67H450|モータドライバ|[TB67H450](https://akizukidenshi.com/goodsaffix/TB67H450FNG_datasheet_ja_20190401.pdf)|
 |ロボサイトモータギア比30:1|移動用モータ|[ダイセン電子のモータ](https://daisen-netstore.com/shopdetail/000000000195/)|
 |JGA25-371 DC Gearmotor with Encoder|移動用モータ|[JGA25-37](https://people.ece.ubc.ca/~eng-services/files/courses/elec391-data_sheets/MOT4-info.pdf)|
 |ROBOパワーセル Eタイプ 6N-800mAh(Ni-MH)|バッテリー|[製品の取り扱い説明書](https://kondo-robot.com/kpc/wp-content/uploads/ROBOPOWER-CELL_Ni-MH_Manual_JP.pdf)|
+|LXDC55使用DCDCコンバーターキット (降圧 5V)|マイコン用に降圧する|[AE-LXDC55-5V](https://akizukidenshi.com/goodsaffix/AE-LXDC55-5V0-rev2.pdf)|
